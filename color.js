@@ -1,15 +1,20 @@
-const colors = ["green", "red", "rgba(133,122,200)","#f15025"];
+//List of colors
 
-const button = document.getElementById('clickMe');
-const color = document.querySelector('.color')
+const colors = ['red','green','pink','orange','purple', 'cyan','grey'];
 
-function getRandomNumber(){
-    return Math.floor(Math.random() * colors.length)
-}
+//Interactive elements
+const button = document.getElementsByClassName('button-clickMe')[0];
+const changingColor = document.getElementById('changingColor');
+const mainContainer = document.body;
 
-button.onclick= function () { 
-const randomNumber = getRandomNumber();
-document.body.style.backgroundColor = colors[randomNumber];
-color.textContent = colors[randomNumber];
-};
+
+
+
+// event on button
+button.addEventListener('click', function(){
+    const randomNumber = Math.floor(Math.random() * colors.length);
+    changingColor.textContent =colors[randomNumber] ;
+    mainContainer.style.backgroundColor = colors[randomNumber];
+        
+});
 
