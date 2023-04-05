@@ -1,74 +1,80 @@
 *{
     box-sizing: content-box;
-    padding:0 ;
-margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25rem;
     background-color: hsl(206, 33%, 96%);
     color: #222;
 }
 
 header{
-display: flex;
-justify-content: space-around;
-align-items: center;
-background-color: #fff;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-height:80px ;
-
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 71px;
+   font-size: 1.5rem;
 }
 
-h1 {
-    color: #49A6E9;
+#title{
+    color: #49a6e9;
+   
 }
 
 a{
-    text-decoration: none;
-    color: #102a42;
+    color: #222;
+    text-decoration:solid;
 }
 
+a:link{
+    color: #222;
+}
+
+
 a:hover{
-    color: #49A6E9;
+    color: rgb(192, 186, 186);
+}
+
+a:active{
+    color: #49a6e9;
 }
 
 main{
-    position: relative;
-    top: 10ch;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    margin: 20ch 0;
-    height:100% ;
-}
-
-.colorContainer{
-    background-color: #222;
-    color: #fff;
-    width: 30%;
-    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 9px;
-
-    font-size: 2rem;
+    flex-direction: column;
+    height: 100vh;
 }
 
-#changingColor{
-    color: #49A6E9;
+#changeColorContainer{
+    width: 50%;
+    height: 8%;
+    background-color: #222;
+    color: #fff;
+    border-radius: 9px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#changeColor{
+    color: #49a6e9;
 }
 
 button{
-    width: 147px;
-    height: 47px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    
-    margin-top: 6ch;
+    margin-top: 5ch;
+    width: 15ch;
+    height: 4ch;
+    border-radius: 6px;
+    font-size:16px ;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
 }
 
 button:hover{

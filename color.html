@@ -2,25 +2,28 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="color.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Flipper</title>
 </head>
 <body>
-    <header>
-        <h1 id="colorFlipper">Color Flipper</h1> <h1><a href="color.html">Simple</a> <a href="hex.html">Hex</a></h1> 
-    </header>
-    
-    <main>
-        <div class="colorContainer">
-            <h2>Background Color :<span id="changingColor">#F1f5f8</span></h2> 
-        </div>
-        <button class="button-clickMe">click me</button>
-    </main>
+   <header>
+    <p id="title">Color Flipper</p>
+    <section>
+        <a href="color.html">Simple</a>
+        <a href="hex.html">Hex</a>
+    </section>
+   </header>
     
 
+   <main id="mainContainer">
+        <div id="changeColorContainer">
+            <h2>Background Color :<span id="changeColor"> #F1f5f8</span></h2>
+        </div>
+        <button id="clickMe">CLICK ME</button>
+   </main>
     <script src="color.js"></script>
 </body>
 </html>
