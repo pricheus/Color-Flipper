@@ -1,20 +1,12 @@
-//colors
-const colors = ['red','blue','cyan','grey','green','pink','yellow']
+//simple random functionnality
+const colorList = ["red","blue", 'green', 'cyan', 'pink', 'purple', 'grey']
+const btn =  document.querySelector('button');
+const body = document.body;
+const colorName =  document.querySelector('.colorName');
+btn.onclick = function (){
+    const randomColor = Math.floor(Math.random() * colorList.length) ;
+    body.style.backgroundColor = colorList[randomColor];
+    colorName.innerHTML = colorList[randomColor];
+    
+}
 
-//interactive elements
-const button = document.getElementById('clickMe');
-const changeColor = document.getElementById('changeColor');
-const backGroundColor = document.getElementById('mainContainer');
-
-
-// funstions
-
-let randomNumber = 0;
-
-console.log(randomNumber)
-//eventListener
-button.onclick = function(){
-     randomNumber = Math.floor( Math.random() * colors.length)
-    changeColor.textContent = colors[randomNumber];
-    backGroundColor.style.background = colors[randomNumber];
-};

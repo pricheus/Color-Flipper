@@ -1,25 +1,19 @@
-//colors
-const colors = [1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F' ]
+//random based on hex colors
+const hexList = ["A","B","C","D","E","F",0,1,2,3,4,5,6,7,8,9];
+const btn =  document.querySelector('button');
+const body = document.body;
+const colorName =  document.querySelector('.colorName')
 
-//interactive elements
-const button = document.getElementById('clickMe');
-const changeColor = document.getElementById('changeColor');
-const backGroundColor = document.getElementById('mainContainer');
-
-
-// functions
-function getRandomNumber (){
-return Math.floor( Math.random() * colors.length);
+function randomNumber(){
+  return Math.floor(Math.random() * hexList.length)
 };
 
-
-//eventListener
-button.onclick = function(){
-  let hex =  '#'; 
-  
-  for(let i=0; i<6; i++){
-    hex += colors[getRandomNumber()]
-  };
-    changeColor.textContent = hex;
-    backGroundColor.style.background = hex;
+btn.onclick = function (){
+    let hash = "#";
+    for(let i=0; i<6 ; i++){
+      hash += hexList[randomNumber()]
+    }    
+    body.style.backgroundColor = hash;
+    colorName.innerHTML = hash;
 };
+
