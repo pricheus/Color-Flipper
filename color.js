@@ -1,12 +1,10 @@
-//simple random functionnality
-const colorList = ["red","blue", 'green', 'cyan', 'pink', 'purple', 'grey']
-const btn =  document.querySelector('button');
-const body = document.body;
-const colorName =  document.querySelector('.colorName');
-btn.onclick = function (){
-    const randomColor = Math.floor(Math.random() * colorList.length) ;
-    body.style.backgroundColor = colorList[randomColor];
-    colorName.innerHTML = colorList[randomColor];
-    
-}
+const colorStore = ['cyan','azure','red','yellow','beige','purple','grey','rosybrown'];
+const btn = document.querySelector('button');
+const colorName = document.querySelector('.colorName');
+const body = document.querySelector('body');
 
+btn.onclick = function(){
+    const randomNumber = Math.floor(Math.random() * colorStore.length)
+    colorName.innerHTML = colorStore[randomNumber];
+    body.style.background = colorStore[randomNumber]
+}
